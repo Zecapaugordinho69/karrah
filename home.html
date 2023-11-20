@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KARRAH - Home</title>
+
+  <style>
+    body {
+      font-family: "Century Gothic", sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #111;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    #header-margin {
+      background-color: #333; /* Cor da margem (mesma cor do rodapé) */
+      height: 12px; /* Altura da margem */
+      width: 100%; /* Largura da margem */
+      margin-top: -12px; /* Ajuste negativo para sobrepor o cabeçalho */
+      position: fixed; /* Fixa a margem na parte superior da página */
+      top: 0; /* Alinha a margem ao topo da página */
+      z-index: 2; /* Garante que a margem fique sobre o cabeçalho */
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #222;
+      color: #fff;
+      text-align: center;
+      padding: 5px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    #logo {
+      max-width: 100%; /* Modificado para ocupar 100% da largura disponível */
+      margin-top: -10px; /* Ajustado conforme solicitado */
+    }
+
+    #menu-icon {
+      cursor: pointer;
+      font-size: 20px;
+      color: #fff;
+      margin-left: 10px; /* Alterado para margin-left */
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    #menu-slideout {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #333;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      text-align: center;
+    }
+
+    #menu-slideout a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 20px;
+      color: #fff;
+      display: block;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    #menu-slideout a:hover {
+      background-color: #555;
+    }
+
+    nav {
+      display: none;
+    }
+
+    nav a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+    }
+
+    nav a:hover {
+      background-color: #444;
+    }
+
+    section {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+
+    #carousel {
+      display: flex;
+      transition: transform 1s ease-in-out;
+      margin: 0 auto;
+    }
+
+    .carousel-image {
+      max-width: 40%;
+      max-height: 40%;
+      object-fit: contain; /* Ajusta a imagem para caber no contêiner */
+    }
+
+    #prev, #next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 24px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    #prev {
+      left: 10px;
+    }
+
+    #next {
+      right: 10px;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="header-margin"></div>
+
+  <header>
+    <div id="menu-icon">&#9776;</div>
+    <a href="shop.html">
+      <img id="logo" src="file:///tmp/guest-do7rg6/%C3%81rea%20de%20Trabalho/KARRAH/3dgifmaker21547.gif" alt="Logo do Site">
+    </a>
+  </header>
+
+  <!-- Menu slideout -->
+  <div id="menu-slideout">
+    <a href="home.html" onclick="closeMenu()">Home</a>
+    <a href="shop.html" onclick="closeMenu()">Shop</a>
+    <a href="lookbook.html" onclick="closeMenu()">Lookbook</a>
+    <a href="comingsoon.html" onclick="closeMenu()">Coming Soon</a>
+  </div>
+
+  <nav>
+    <a href="#New Drop">New Drop</a>
+    <a href="#Explore">Explore</a>
+    <a href="#Coming Soon">Coming Soon</a>
+  </nav>
+
+  <section>
+    <div id="carousel">
+      <!-- Adicione suas imagens do carrossel aqui -->
+      <img src="file:///tmp/guest-do7rg6/%C3%81rea%20de%20Trabalho/KARRAH/Mad-22.jpg" class="carousel-image">
+      <img src="file:///tmp/guest-do7rg6/%C3%81rea%20de%20Trabalho/KARRAH/Mad-25.jpg" class="carousel-image">
+      <img src="file:///tmp/guest-do7rg6/%C3%81rea%20de%20Trabalho/KARRAH/Mad-24.jpg" class="carousel-image">
+      <img src="file:///tmp/guest-do7rg6/%C3%81rea%20de%20Trabalho/KARRAH/Mad-21.jpg" class="carousel-image">
+      <img src="file:///tmp/guest-do7rg6/%C3%81rea%20de%20Trabalho/KARRAH/Mad-8.jpg" class="carousel-image">
+      <img src="file:///tmp/guest-do7rg6/%C3%81rea%20de%20Trabalho/KARRAH/Mad-10.jpg" class="carousel-image">
+      <img src="file:///tmp/guest-do7rg6/%C3%81rea%20de%20Trabalho/KARRAH/Mad-11.jpg" class="carousel-image">
+      <img src="file:///tmp/guest-do7rg6/%C3%81rea%20de%20Trabalho/KARRAH/Mad-9.jpg" class="carousel-image">
+      <img src="file:///tmp/guest-do7rg6/%C3%81rea%20de%20Trabalho/KARRAH/Mad-23.jpg" class="carousel-image">
+      <!-- Adicione mais imagens conforme necessário -->
+    </div>
+    <div id="prev" onclick="prevSlide">&#10094;</div>
+    <div id="next" onclick="nextSlide">&#10095;</div>
+  </section>
+
+  <footer>
+    <p>© Joás Costa - [2023]</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuIcon = document.getElementById('menu-icon');
+      const menuSlideout = document.getElementById('menu-slideout');
+      const carousel = document.getElementById('carousel');
+      const prevBtn = document.getElementById('prev');
+      const nextBtn = document.getElementById('next');
+
+      menuIcon.addEventListener('mouseenter', function () {
+        menuSlideout.style.width = '250px';
+      });
+
+      menuSlideout.addEventListener('mouseleave', function () {
+        menuSlideout.style.width = '0';
+      });
+
+      let currentIndex = 0;
+
+      function showSlides() {
+        carousel.style.transform = `translateX(${-currentIndex * 33.33}%)`;
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 3) % 9;
+        showSlides();
+      }
+
+      function prevSlide() {
+        currentIndex = (currentIndex - 3 + 9) % 9;
+        showSlides();
+      }
+
+      nextBtn.addEventListener('click', nextSlide);
+      prevBtn.addEventListener('click', prevSlide);
+
+      // Autoplay
+      setInterval(nextSlide, 5000); // Change slide every 5 seconds
+    });
+
+    function closeMenu() {
+      document.getElementById('menu-slideout').style.width = '0';
+    }
+  </script>
+</body>
+</html>
+
+
