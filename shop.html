@@ -20,33 +20,33 @@
     }
 
     header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       background-color: #222;
       color: #fff;
       text-align: center;
       padding: 12px;
       width: 100%;
       box-sizing: border-box;
+      position: relative;
     }
 
     #menu-margin {
       background-color: #333;
-      height: 56px;
+      height: 75px; /* Altura da margem mais clara */
       width: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
     #menu-icon {
       cursor: pointer;
       font-size: 24px;
       color: #fff;
-      margin-right: 10px;
     }
 
     #logo {
-      max-width: 50%;
-      margin-top: -10px;
+      max-width: 80%; /* Largura máxima da logo */
     }
 
     h1 {
@@ -110,14 +110,16 @@
 
     #shopImages {
       display: flex;
+      flex-wrap: wrap; /* Nova propriedade para que as imagens se ajustem à largura da tela */
+      justify-content: center; /* Centralizar as imagens horizontalmente */
     }
 
     .shop-image {
       position: relative;
       width: calc(200px * 1.33);
-      height: calc(150px * 1.33);
+      height: calc(200px * 1.33);
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-      margin-right: 10px;
+      margin: 10px; /* Espaço entre as imagens */
       overflow: hidden;
     }
 
@@ -136,12 +138,29 @@
       top: 0;
       left: 100%;
       width: 100%;
-      height: 100%;
+      height: 130%;
       transition: transform 0.5s ease-in-out;
     }
 
     .shop-image:hover .img2 {
       transform: translateX(-100%);
+    }
+
+    .shop-info {
+      background-color: rgba(0, 0, 0, 0.8);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      text-align: left;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .shop-image:hover .shop-info {
+      opacity: 1;
     }
 
     #shopImages .shop-image:last-child {
@@ -160,9 +179,10 @@
 <body>
 
   <header>
-    <div id="menu-margin"></div>
-    <div id="menu-icon">&#9776;</div>
-    <img id="logo" src="file:///tmp/guest-do7rg6/%C3%81rea%20de%20Trabalho/KARRAH/3dgifmaker21547.gif" alt="Logo do Site">
+    <div id="menu-margin">
+      <div id="menu-icon">&#9776;</div>
+      <img id="logo" src="D:\DADOS DO USUARIO\Desktop\KARRAH\guifão.gif" alt="Logo do Site">
+    </div>
   </header>
 
   <!-- Menu slideout -->
@@ -182,20 +202,101 @@
   <section>
     <div id="shopImages">
       <div class="shop-image">
-        <img src="Camisa1.png" class="img1">
-        <img src="Camisa2.jpg" class="img2">
+        <img src="https://acdn.mitiendanube.com/stores/001/895/020/products/5g54320-1-37c6c4b1730707456716999996209575-640-0.webp" class="img1">
+        <img src="https://acdn.mitiendanube.com/stores/001/895/020/products/5g54320-2-9eeba1504be4b51c6c16999996268168-1024-1024.webp" class="img2">
+        <div class="shop-info">
+          <p>Product Name 1</p>
+          <p>Price: $XX.XX</p>
+        </div>
       </div>
       <div class="shop-image">
-        <img src="Camisa1.png" class="img1">
-        <img src="Camisa2.jpg" class="img2">
+        <img src="https://grindskateshop.com.br/wp-content/uploads/2023/10/0027_CSIOANDREASI-17-1-620x620.webp" class="img1">
+        <img src="https://acdn.mitiendanube.com/stores/001/895/020/products/5g54322-1-957f392cc639433d1616999995818172-640-0.webp" class="img2">
+        <div class="shop-info">
+          <p>Product Name 2</p>
+          <p>Price: $XX.XX</p>
+        </div>
       </div>
       <div class="shop-image">
-        <img src="Camisa1.png" class="img1">
-        <img src="Camisa2.jpg" class="img2">
+        <img src="https://images.tcdn.com.br/img/img_prod/680475/camiseta_mad_enlatados_patada_azul_13745_1_5cac2dd6fc534ec369a4aa253b7d58ab.jpg" class="img1">
+        <img src="https://images.tcdn.com.br/img/img_prod/680475/camiseta_mad_enlatados_patada_azul_13745_2_46869a28cae0bd5cc3593c22a65223c3.jpg" class="img2">
+        <div class="shop-info">
+          <p>Product Name 3</p>
+          <p>Price: $XX.XX</p>
+        </div>
       </div>
       <div class="shop-image">
-        <img src="Camisa1.png" class="img1">
-        <img src="Camisa2.jpg" class="img2">
+        <img src="https://hipnoise.com.br/wp-content/uploads/2023/10/MAD_0031_@CSIOANDREASI-13.jpg" class="img1">
+        <img src="https://hipnoise.com.br/wp-content/uploads/2023/10/MAD_0030_@CSIOANDREASI-14.jpg" class="img2">
+        <div class="shop-info">
+          <p>Product Name 4</p>
+          <p>Price: $XX.XX</p>
+        </div>
+      </div>
+      <!-- Adicione mais imagens conforme necessário -->
+      <div class="shop-image">
+        <img src="URL_DA_IMAGEM" class="img1">
+        <img src="URL_DA_IMAGEM" class="img2">
+        <div class="shop-info">
+          <p>Product Name 5</p>
+          <p>Price: $XX.XX</p>
+        </div>
+      </div>
+      <div class="shop-image">
+        <img src="URL_DA_IMAGEM" class="img1">
+        <img src="URL_DA_IMAGEM" class="img2">
+        <div class="shop-info">
+          <p>Product Name 6</p>
+          <p>Price: $XX.XX</p>
+        </div>
+      </div>
+      <div class="shop-image">
+        <img src="URL_DA_IMAGEM" class="img1">
+        <img src="URL_DA_IMAGEM" class="img2">
+        <div class="shop-info">
+          <p>Product Name 7</p>
+          <p>Price: $XX.XX</p>
+        </div>
+      </div>
+      <div class="shop-image">
+        <img src="URL_DA_IMAGEM" class="img1">
+        <img src="URL_DA_IMAGEM" class="img2">
+        <div class="shop-info">
+          <p>Product Name 8</p>
+          <p>Price: $XX.XX</p>
+        </div>
+      </div>
+      <div class="shop-image">
+        <img src="URL_DA_IMAGEM" class="img1">
+        <img src="URL_DA_IMAGEM" class="img2">
+        <div class="shop-info">
+          <p>Product Name 9</p>
+          <p>Price: $XX.XX</p>
+        </div>
+      </div>
+      <div class="shop-image">
+        <img src="URL_DA_IMAGEM" class="img1">
+        <img src="URL_DA_IMAGEM" class="img2">
+        <div class="shop-info">
+          <p>Product Name 10</p>
+          <p>Price: $XX.XX</p>
+        </div>
+      </div>
+      <div class="shop-image">
+        <img src="URL_DA_IMAGEM" class="img1">
+        <img src="URL_DA_IMAGEM" class="img2">
+        <div class="shop-info">
+          <p>Product Name 11</p>
+          <p>Price: $XX.XX</p>
+        </div>
+      </div>
+      <div class="shop-image">
+        <img src="URL_DA_IMAGEM" class="img1">
+        <img src="URL_DA_IMAGEM" class="img2">
+        <div class="shop-info">
+          <p>Product Name 12</p>
+          <p>Price: $XX.XX</p>
+        </div>
       </div>
     </div>
   </section>
@@ -224,4 +325,3 @@
   </script>
 </body>
 </html>
-
