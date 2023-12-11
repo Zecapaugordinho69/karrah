@@ -102,6 +102,7 @@
       padding: 15px;
       flex: 1;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       width: 100%;
@@ -174,6 +175,12 @@
       padding: 10px;
       width: 100%;
     }
+
+    #countdown {
+      font-size: 24px;
+      margin-top: 20px;
+      color: #fff;
+    }
   </style>
 </head>
 <body>
@@ -189,8 +196,8 @@
   <div id="menu-slideout">
     <a href="home.html" onclick="closeMenu()">Home</a>
     <a href="shop.html" onclick="closeMenu()">Shop</a>
-    <a href="lookbook.html" onclick="closeMenu()">Lookbook</a>
     <a href="comingsoon.html" onclick="closeMenu()">Coming Soon</a>
+    <a href="contato.html" onclick="closeMenu()">Contato</a>
   </div>
 
   <nav>
@@ -205,100 +212,38 @@
         <img src="https://acdn.mitiendanube.com/stores/001/895/020/products/5g54320-1-37c6c4b1730707456716999996209575-640-0.webp" class="img1">
         <img src="https://acdn.mitiendanube.com/stores/001/895/020/products/5g54320-2-9eeba1504be4b51c6c16999996268168-1024-1024.webp" class="img2">
         <div class="shop-info">
-          <p>Product Name 1</p>
-          <p>Price: $XX.XX</p>
+          <p>Astral Shirt</p>
+          <p>Price: $120.00</p>
         </div>
       </div>
       <div class="shop-image">
         <img src="https://grindskateshop.com.br/wp-content/uploads/2023/10/0027_CSIOANDREASI-17-1-620x620.webp" class="img1">
         <img src="https://acdn.mitiendanube.com/stores/001/895/020/products/5g54322-1-957f392cc639433d1616999995818172-640-0.webp" class="img2">
         <div class="shop-info">
-          <p>Product Name 2</p>
-          <p>Price: $XX.XX</p>
+          <p>Creation Shirt</p>
+          <p>Price: $120.00</p>
         </div>
       </div>
       <div class="shop-image">
         <img src="https://images.tcdn.com.br/img/img_prod/680475/camiseta_mad_enlatados_patada_azul_13745_1_5cac2dd6fc534ec369a4aa253b7d58ab.jpg" class="img1">
         <img src="https://images.tcdn.com.br/img/img_prod/680475/camiseta_mad_enlatados_patada_azul_13745_2_46869a28cae0bd5cc3593c22a65223c3.jpg" class="img2">
         <div class="shop-info">
-          <p>Product Name 3</p>
-          <p>Price: $XX.XX</p>
+          <p>Grizzle Shirt</p>
+          <p>Price: $120.00</p>
         </div>
       </div>
       <div class="shop-image">
         <img src="https://hipnoise.com.br/wp-content/uploads/2023/10/MAD_0031_@CSIOANDREASI-13.jpg" class="img1">
         <img src="https://hipnoise.com.br/wp-content/uploads/2023/10/MAD_0030_@CSIOANDREASI-14.jpg" class="img2">
         <div class="shop-info">
-          <p>Product Name 4</p>
-          <p>Price: $XX.XX</p>
-        </div>
-      </div>
-      <!-- Adicione mais imagens conforme necessário -->
-      <div class="shop-image">
-        <img src="URL_DA_IMAGEM" class="img1">
-        <img src="URL_DA_IMAGEM" class="img2">
-        <div class="shop-info">
-          <p>Product Name 5</p>
-          <p>Price: $XX.XX</p>
-        </div>
-      </div>
-      <div class="shop-image">
-        <img src="URL_DA_IMAGEM" class="img1">
-        <img src="URL_DA_IMAGEM" class="img2">
-        <div class="shop-info">
-          <p>Product Name 6</p>
-          <p>Price: $XX.XX</p>
-        </div>
-      </div>
-      <div class="shop-image">
-        <img src="URL_DA_IMAGEM" class="img1">
-        <img src="URL_DA_IMAGEM" class="img2">
-        <div class="shop-info">
-          <p>Product Name 7</p>
-          <p>Price: $XX.XX</p>
-        </div>
-      </div>
-      <div class="shop-image">
-        <img src="URL_DA_IMAGEM" class="img1">
-        <img src="URL_DA_IMAGEM" class="img2">
-        <div class="shop-info">
-          <p>Product Name 8</p>
-          <p>Price: $XX.XX</p>
-        </div>
-      </div>
-      <div class="shop-image">
-        <img src="URL_DA_IMAGEM" class="img1">
-        <img src="URL_DA_IMAGEM" class="img2">
-        <div class="shop-info">
-          <p>Product Name 9</p>
-          <p>Price: $XX.XX</p>
-        </div>
-      </div>
-      <div class="shop-image">
-        <img src="URL_DA_IMAGEM" class="img1">
-        <img src="URL_DA_IMAGEM" class="img2">
-        <div class="shop-info">
-          <p>Product Name 10</p>
-          <p>Price: $XX.XX</p>
-        </div>
-      </div>
-      <div class="shop-image">
-        <img src="URL_DA_IMAGEM" class="img1">
-        <img src="URL_DA_IMAGEM" class="img2">
-        <div class="shop-info">
-          <p>Product Name 11</p>
-          <p>Price: $XX.XX</p>
-        </div>
-      </div>
-      <div class="shop-image">
-        <img src="URL_DA_IMAGEM" class="img1">
-        <img src="URL_DA_IMAGEM" class="img2">
-        <div class="shop-info">
-          <p>Product Name 12</p>
-          <p>Price: $XX.XX</p>
+          <p>Duck Witch Shirt</p>
+          <p>Price: $120.00</p>
         </div>
       </div>
     </div>
+
+    <!-- Relógio de promoção -->
+    <div id="countdown"></div>
   </section>
 
   <footer>
@@ -317,11 +262,32 @@
       menuSlideout.addEventListener('mouseleave', function () {
         menuSlideout.style.width = '0';
       });
-    });
 
-    function closeMenu() {
-      document.getElementById('menu-slideout').style.width = '0';
-    }
+      function closeMenu() {
+        document.getElementById('menu-slideout').style.width = '0';
+      }
+
+      // Função para calcular o tempo restante até o final da promoção
+      function calculateCountdown() {
+        const now = new Date();
+        const endDate = new Date('2023-12-31T23:59:59'); // Data final da promoção
+
+        const timeDifference = endDate - now;
+
+        const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+        document.getElementById('countdown').innerHTML = `Promoção termina em: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+      }
+
+      // Chama a função inicialmente
+      calculateCountdown();
+
+      // Atualiza o relógio a cada segundo
+      setInterval(calculateCountdown, 1000);
+    });
   </script>
 </body>
 </html>
