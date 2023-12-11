@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KARRAH - Contato</title>
+
+  <style>
+    body {
+      font-family: "Century Gothic", sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #111;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    #header-margin {
+      background-color: #333;
+      height: 0px;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 2;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #222;
+      color: #fff;
+      text-align: center;
+      padding: 5px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    #menu-icon {
+      cursor: pointer;
+      font-size: 20px;
+      color: #fff;
+      margin-left: 10px;
+    }
+
+    #logo {
+      max-width: 100%;
+      margin-top: -10px;
+    }
+
+    #menu-slideout {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #333;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      text-align: center;
+    }
+
+    #menu-slideout a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 20px;
+      color: #fff;
+      display: block;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    #menu-slideout a:hover {
+      background-color: #555;
+    }
+
+    nav {
+      display: none;
+    }
+
+    nav a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+    }
+
+    nav a:hover {
+      background-color: #444;
+    }
+
+    section {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    #contactForm, #customerInfo {
+      max-width: 600px;
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+      background-color: #222;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    #customerInfo {
+      display: none;
+    }
+
+    label, input, textarea, button {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    button {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="header-margin"></div>
+
+  <header>
+    <div id="menu-icon">&#9776;</div>
+    <img id="logo" src="D:\DADOS DO USUARIO\Desktop\KARRAH/guifão.gif" alt="Logo do Site">
+  </header>
+
+  <!-- Menu slideout -->
+  <div id="menu-slideout">
+    <a href="home.html" onclick="closeMenu()">Home</a>
+    <a href="shop.html" onclick="closeMenu()">Shop</a>
+    <a href="comingsoon.html" onclick="closeMenu()">Coming Soon</a>
+    <a href="contato.html" onclick="closeMenu()">Contato</a>
+  </div>
+
+  <nav>
+    <a href="#New Drop">New Drop</a>
+    <a href="#Explore">Explore</a>
+    <a href="#Coming Soon">Coming Soon</a>
+  </nav>
+
+  <section>
+    <div id="contactForm">
+      <h2>Entre em Contato</h2>
+      <label for="name">Nome:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Telefone:</label>
+      <input type="tel" id="phone" name="phone">
+
+      <label for="message">Mensagem:</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="button" onclick="submitForm()">Enviar</button>
+    </div>
+
+    <div id="customerInfo">
+      <h2>Dados do Cliente</h2>
+      <p id="customerName"></p>
+      <p id="customerEmail"></p>
+      <p id="customerPhone"></p>
+      <p id="customerMessage"></p>
+      <p id="emailStatus"></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© Joás Costa - [2023]</p>
+  </footer>
+
+  <script>
+    function submitForm() {
+      // Simula o envio do formulário para o servidor (substitua com AJAX para o servidor PHP)
+      var formData = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value,
+        message: document.getElementById("message").value
+      };
+
+      // Simula uma resposta do servidor (substitua com a resposta real do servidor)
+      var response = {
+        customerName: formData.name,
+        customerEmail: formData.email,
+        customerPhone: formData.phone,
+        customerMessage: formData.message,
+        emailStatus: "Email enviado com sucesso!"
+      };
+
+      // Atualiza a página com os dados do cliente e a mensagem de status do email
+      document.getElementById("customerName").innerText = "Nome: " + response.customerName;
+      document.getElementById("customerEmail").innerText = "Email: " + response.customerEmail;
+      document.getElementById("customerPhone").innerText = "Telefone: " + response.customerPhone;
+      document.getElementById("customerMessage").innerText = "Mensagem: " + response.customerMessage;
+      document.getElementById("emailStatus").innerText = "Status do Email: " + response.emailStatus;
+
+      // Exibe os dados do cliente e a mensagem de status
+      document.getElementById("contactForm").style.display = "none";
+      document.getElementById("customerInfo").style.display = "block";
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuIcon = document.getElementById('menu-icon');
+      const menuSlideout = document.getElementById('menu-slideout');
+
+      menuIcon.addEventListener('mouseenter', function () {
+        menuSlideout.style.width = '250px';
+      });
+
+      menuSlideout.addEventListener('mouseleave', function () {
+        menuSlideout.style.width = '0';
+      });
+    });
+
+    function closeMenu() {
+      document.getElementById('menu-slideout').style.width = '0';
+    }
+  </script>
+</body>
+</html>
